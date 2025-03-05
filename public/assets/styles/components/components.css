@@ -1,3 +1,4 @@
 /* Toujours nommer son component avec un "_" au début, puis l'importer comme ci-dessous.  */
 
 /* @import "_yourComponent.css"; */
+@import "_home.css";
