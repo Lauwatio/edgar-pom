@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('../../fonts/Futura-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura XBlk BT';
+    src: url('../../fonts/FuturaBT-ExtraBlack.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
