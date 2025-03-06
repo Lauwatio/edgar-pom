@@ -1,0 +1,16 @@
+ /* COLORS 
+  --yellow: #feeb25;
+  --blue: #282e69;
+  --pink: #de3377;
+  --green: #47de33;*/
+
+html {
+    overflow: hidden;
+}
+.yellowpom {
+    color: #feeb25;
+    font-size: 20rem;
+    rotate: -90deg;
+    position: fixed;
+    margin-top: 10rem;
+}
