@@ -47,11 +47,12 @@ img {
 h1, span {
     mix-blend-mode: multiply;
 }
-section {
+a {
     padding: 20px;
     margin: 5px;
     border-radius: 20px;
     width: 90%;
+    text-decoration: none;
 }
 .greenback {
     background-color: #47de33;

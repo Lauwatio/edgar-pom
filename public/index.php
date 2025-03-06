@@ -15,14 +15,14 @@ include_once "../includes/components/head.php";
     <img src="./assets/images/vache.png" alt="Vache des highlands">
 
     <div>
-      <section class="greenback">
+      <a href="./" class="greenback">
         <h2>AfterPom</h2>
         <p>Pour les enfants !</p>
-      </section>
-      <section class="pinkback">
+      </a>
+      <a href="./" class="pinkback">
         <h2>PomKorn</h2>
         <p>Pour petits et grands !</p>
-      </section>
+      </a>
     </div>
   </main>
   <?php include_once "../includes/components/footer.php" ?>
