@@ -1,0 +1,65 @@
+  /* COLORS 
+  --yellow: #feeb25;
+  --blue: #282e69;
+  --pink: #de3377;
+  --green: #47de33;*/
+html {
+    
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+body, main, div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+span, body, main, img {
+    position: fixed;
+}
+.pink {
+    color: #de3377;
+    z-index: 1;
+    margin-top: 5rem;
+    font-size: 5rem;
+    line-height: 80%;
+}
+.yellow {
+    color: #feeb25;
+    font-size: 7rem;
+    font-family: Futura XBlk BT;
+    z-index: 0;
+    line-height: 80%;
+    margin-top: 4rem;
+}
+.green {
+    color: #47de33;
+    z-index: 3;
+    font-size: 3rem;
+    margin-top: 11rem;
+    line-height: 80%;
+}
+img {
+    margin-top: 14rem;
+}
+h1, span {
+    mix-blend-mode: multiply;
+}
+a {
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+    width: 90%;
+    text-decoration: none;
+}
+.greenback {
+    background-color: #47de33;
+}
+.pinkback {
+    background-color: #de3377;
+}
+div {
+    margin-top: 13.3rem;
+}
