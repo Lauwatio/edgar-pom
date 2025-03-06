@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-$title = "PomKorn";
+$title = "AfterPom";
 $descript = "";
 include_once "../includes/components/head.php";
 ?>
@@ -10,8 +10,8 @@ include_once "../includes/components/head.php";
   <?php include_once "../includes/components/header.php" ?>
   <h3 class="yellowpom">POM</h3>
   <main>
-    <h1>PomKorn</h1>
-    <p>Faites pétiller votre soirée !</p>
+    <h1>AfterPom</h1>
+    <p>Divertissez vos enfants !</p>
     <figcaption class="wrap">
         <a class="jeu pinkcase" href="">
                 <p>Quizz</p>

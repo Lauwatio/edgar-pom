@@ -7,7 +7,7 @@ include_once "../includes/components/head.php";
 ?>
 
 <body>
-  <?php include_once "../includes/components/header.php" ?>
+  
   <main>
     <span class="yellow">EDGAR<br>POM</span>
     <h1 class="pink">EDGAR<br>POM</h1>
@@ -15,7 +15,7 @@ include_once "../includes/components/head.php";
     <img src="./assets/images/vache.png" alt="Vache des highlands">
 
     <div>
-      <a href="./" class="greenback">
+      <a href="./enfant.php" class="greenback">
         <h2>AfterPom</h2>
         <p>Pour les enfants !</p>
       </a>
@@ -25,7 +25,7 @@ include_once "../includes/components/head.php";
       </a>
     </div>
   </main>
-  <?php include_once "../includes/components/footer.php" ?>
+  
 </body>
 
 </html>
