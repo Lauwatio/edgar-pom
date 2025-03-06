@@ -12,5 +12,32 @@ html {
     font-size: 20rem;
     rotate: -90deg;
     position: fixed;
-    margin-top: 10rem;
+    margin-top: 12rem;
+    z-index: 0;
+}
+main {
+    margin-top: 2rem;
+    z-index: 1;
+    color: #282e69;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+figure {
+    width: 40vw;
+    height: 40vw;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pinkcase {
+    border: solid 4px #de3377;
+}
+.greencase {
+    border: solid 4px #47de33;
 }
