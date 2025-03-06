@@ -13,24 +13,16 @@ include_once "../includes/components/head.php";
     <h1>PomKorn</h1>
     <p>Faites pétiller votre soirée !</p>
     <figcaption class="wrap">
-        <figure class="pinkcase">
-            <p>Quizz</p>
-        </figure>
-        <figure class="greencase">
-
-        </figure>
-        <figure class="greencase">
-
-        </figure>
-        <figure class="pinkcase">
-
-        </figure>
-        <figure class="pinkcase">
-
-        </figure>
-        <figure class="greencase">
-
-        </figure>
+        <a class="jeu pinkcase" href="">
+                <p>Quizz</p>
+        </a>
+        <a class="jeu greencase" href="">
+                <p>Blind Test</p>
+        </a>
+        <a class="jeu greencase" href="">
+                <p>Défi filmez vous !</p>
+        </a>
+        
 </figcaption>
   </main>
   <?php include_once "../includes/components/footer.php" ?>

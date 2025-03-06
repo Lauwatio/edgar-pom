@@ -26,18 +26,23 @@ main {
     width: 100%;
     justify-content: space-around;
 }
-figure {
-    width: 40vw;
-    height: 40vw;
-    margin: 10px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .pinkcase {
     border: solid 4px #de3377;
 }
 .greencase {
     border: solid 4px #47de33;
+}
+.jeu {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.jeu {
+    width: 40vw;
+    height: 40vw;
+    margin: 10px;
+    border-radius: 20px;
 }
