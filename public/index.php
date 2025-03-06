@@ -13,8 +13,16 @@ include_once "../includes/components/head.php";
     <h1 class="pink">EDGAR<br>POM</h1>
     <span class="green">CIDRE<br>et JUS</span>
     <img src="./assets/images/vache.png" alt="Vache des highlands">
+
     <div>
-      <ul class="questions-wrapper"></ul>
+      <section class="greenback">
+        <h2>AfterPom</h2>
+        <p>Pour les enfants !</p>
+      </section>
+      <section class="pinkback">
+        <h2>PomKorn</h2>
+        <p>Pour petits et grands !</p>
+      </section>
     </div>
   </main>
   <?php include_once "../includes/components/footer.php" ?>
