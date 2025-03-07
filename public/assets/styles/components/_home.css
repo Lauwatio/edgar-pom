@@ -20,14 +20,14 @@ span, body, .home, .home-image {
     position: fixed;
 }
 .pink {
-    color: #de3377;
+    color: var(--pink);
     z-index: 1;
     margin-top: 5rem;
     font-size: 5rem;
     line-height: 80%;
 }
 .yellow {
-    color: #feeb25;
+    color: var(--yellow);
     font-size: 7rem;
     font-family: Futura XBlk BT;
     z-index: 0;
@@ -35,7 +35,7 @@ span, body, .home, .home-image {
     margin-top: 4rem;
 }
 .green {
-    color: #47de33;
+    color: var(--green);
     z-index: 3;
     font-size: 3rem;
     margin-top: 11rem;
@@ -55,10 +55,10 @@ a {
     text-decoration: none;
 }
 .greenback {
-    background-color: #47de33;
+    background-color: var(--green);
 }
 .pinkback {
-    background-color: #de3377;
+    background-color: var(--pink);
 }
 .home-menu {
     margin-top: 13.3rem;
