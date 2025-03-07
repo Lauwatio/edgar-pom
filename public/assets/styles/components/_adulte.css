@@ -18,7 +18,7 @@ html {
 main {
     margin-top: 2rem;
     z-index: 1;
-    color: #282e69;
+    color: var(--blue);
 }
 .wrap {
     display: flex;
@@ -28,19 +28,15 @@ main {
 }
 
 .pinkcase {
-    border: solid 4px #de3377;
+    border: solid 4px var(--pink);
 }
 .greencase {
-    border: solid 4px #47de33;
+    border: solid 4px var(--green);
 }
 .jeu {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.jeu {
     width: 40vw;
     height: 40vw;
     margin: 10px;
