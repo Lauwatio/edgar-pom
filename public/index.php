@@ -8,13 +8,13 @@ include_once "../includes/components/head.php";
 
 <body>
   
-  <main>
+  <main class="home">
     <span class="yellow">EDGAR<br>POM</span>
     <h1 class="pink">EDGAR<br>POM</h1>
     <span class="green">CIDRE<br>et JUS</span>
-    <img src="./assets/images/vache.png" alt="Vache des highlands">
+    <img class="home-image" src="./assets/images/vache.png" alt="Vache des highlands">
 
-    <div>
+    <div class="home-menu">
       <a href="./enfant.php" class="greenback">
         <h2>AfterPom</h2>
         <p>Pour les enfants !</p>
