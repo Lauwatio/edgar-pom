@@ -47,7 +47,7 @@ span, body, .home, .home-image {
 h1, span {
     mix-blend-mode: multiply;
 }
-a {
+.greenback, .pinkback {
     padding: 20px;
     margin: 5px;
     border-radius: 20px;
