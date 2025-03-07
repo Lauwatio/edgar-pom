@@ -4,8 +4,16 @@
   --pink: #de3377;
   --green: #47de33;*/
 
+.quizz-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .reponses {
     background-color: #de3377;
     border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
     
 }

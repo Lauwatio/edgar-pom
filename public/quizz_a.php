@@ -9,9 +9,10 @@ include_once "../includes/components/head.php";
 <body>
   <?php include_once "../includes/components/header.php" ?>
   <h3 class="yellowpom">POM</h3>
-  <main>
+  <main class="quizz-main">
     <h1>Quizz PomKorn</h1>
     <figcaption class="reponses">
+        <h2>Enoncé question</h2>
         <a class="reponse" href="">
                 <p>Réponse 1</p>
         </a>
