@@ -15,8 +15,11 @@ include_once "../includes/components/head.php";
 
     <figcaption class="joueurs">
         <h3>Joueurs</h3>
-        <input class="joueur" type="text">
-        <button class="joueur">+</button>
+        <input class="joueur" type="text" placeholder="Entrez le nom du joueur">
+        <ul id="liste">
+
+        </ul>
+        <button id="ajouter" class="joueur">+</button>
     </figcaption>
 
     <figcaption class="reponses">

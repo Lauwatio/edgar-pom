@@ -24,6 +24,7 @@
     border: none;
     color: var(--blue);
     border-radius: 10px;
+    font-size: 1rem;
 }
 .reponses {
     display: none;
