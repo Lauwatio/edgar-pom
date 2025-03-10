@@ -4,6 +4,7 @@
 $title = "PomKorn Quizz";
 $descript = "";
 include_once "../includes/components/head.php";
+include_once "../includes/components/header.php";
 ?>
 
 <body>
@@ -11,16 +12,17 @@ include_once "../includes/components/head.php";
   <h3 class="yellowpom">POM</h3>
 
   <main class="quizz-main">
-    <h1>Quizz PomKorn</h1>
+    <h1>Quizz <br> PomKorn</h1>
 
     <figcaption class="players">
         <h3>Joueurs</h3>
-        <input id="" class="player" type="text" placeholder="Entrez le nom du joueur">
         <ul id="list">
+        <input class="player" type="text" placeholder="Entrez le nom du joueur">
 
         </ul>
         <button id="add" class="player">+</button>
     </figcaption>
+    <button id="play" >Jouer</button>
 
     <figcaption class="answers">
         <h3>Tour de ...</h3>

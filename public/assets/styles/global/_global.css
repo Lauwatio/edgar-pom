@@ -40,6 +40,7 @@
 
 html {
   font-family: var(--main-font);
+
 }
 
 body {
@@ -56,4 +57,11 @@ body {
 :is(p, a, ul, ol, div) {
   font-size: 1.125rem;
   line-height: 1.5;
+}
+.fa-solid {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 2rem;
+  color: var(--blue);
 }

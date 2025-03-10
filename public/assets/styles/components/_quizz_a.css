@@ -32,3 +32,16 @@
 .answers {
     display: none;
 }
+button {
+    padding: 20px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 20px;
+    color: var(--blue);
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}

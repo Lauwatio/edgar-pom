@@ -43,6 +43,7 @@ $actual_url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_
   <!-- Scripts and styles -->
   <script defer src="assets/scripts/index.js" type="module"></script>
   <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="https://kit.fontawesome.com/79fc45146d.js" crossorigin="anonymous"></script>
 
   <!-- Manifest for PWA -->
   <link rel="manifest" href="manifest.json">
