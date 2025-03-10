@@ -14,7 +14,10 @@
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
-    width: 90%;
+    width: 90vw;
+}
+#liste {
+    width: 100%;
 }
 .reponse, .joueur {
     background-color: var(--white);

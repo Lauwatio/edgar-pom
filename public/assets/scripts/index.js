@@ -13,12 +13,13 @@ const init = () => {
 
 const ajouter = document.getElementById("ajouter");
 const liste = document.getElementById("liste");
-let input = document.createElement("input");
+
 
 ajouter.addEventListener("click", function () {
+  let input = document.createElement("input");
   console.log(liste);
-  liste.append(input);
   input.classList.add("joueur");
   input.type = "text";
   input.placeholder = "Entrez le nom du joueur";
+  liste.append(input);
 });
