@@ -3,6 +3,8 @@ console.log("Made with 💛");
 // Exemple d'import de fonctions.
 // import { validateEmail } from "./utilis.js";
 
+
+
 import { renderQuestion } from "./modules/getAllQuestions.js";
 
 document.addEventListener("DOMContentLoaded", () => init());
@@ -10,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => init());
 const init = () => {
   renderQuestion();
 };
+
+// crée un tableaux pour les joueurs
 
 function mettreAJourJoueurs() {
   
@@ -20,17 +24,19 @@ function mettreAJourJoueurs() {
       console.log(`${index}. ${joueurNom}`);
   });
 
-  let tableau = []; // Réinitialise le tableau
+  let tableau = [];
 
 
   list.forEach((input) => {
       let joueurNom = input.value;
-      tableau.push(joueurNom); // Ajoute au tableau
+      tableau.push(joueurNom);
       
   });
   console.log(tableau);
 }
 
+
+/* ajouter des joueurs */
 
 const add = document.getElementById("add");
 const list = document.getElementById("list");
@@ -46,14 +52,23 @@ add.addEventListener("click", function () {
 
 mettreAJourJoueurs();
 
-// Met à jour en temps réel lorsque l'utilisateur tape
 list.addEventListener("input", mettreAJourJoueurs);
 
-const players = document.getElementById("players");
-const answers = document.getElementById("answers");
+// cacher / montrer section joueurs / questions
+
+const players = document.querySelector(".players");
+const answers = document.querySelector(".answers");
+const play = document.getElementById("play");
+
+answers.classList.add("none");
+players.classList.add("block");
 
 play.addEventListener("click", function(){
 
-  players.classList.add("none");
-  answers.classList.add("block");
+  players.classList.replace("block", "none");
+    answers.classList.replace("none", "block");
 });
+
+if (!players || !answers || !play) {
+  console.error("Un des éléments n'a pas été trouvé !");
+}

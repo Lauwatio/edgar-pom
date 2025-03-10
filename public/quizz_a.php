@@ -8,7 +8,7 @@ include_once "../includes/components/header.php";
 ?>
 
 <body>
-  <?php include_once "../includes/components/header.php" ?>
+  <?php include_once "../includes/components/header_jeu_pomkorn.php" ?>
   <h3 class="yellowpom">POM</h3>
 
   <main class="quizz-main">
@@ -21,11 +21,15 @@ include_once "../includes/components/header.php";
 
         </ul>
         <button id="add" class="player">+</button>
+        <button id="play" >Jouer</button>
     </figcaption>
-    <button id="play" >Jouer</button>
+    
 
     <figcaption class="answers">
-        <h3>Tour de ...</h3>
+        <h3>Tour de 
+                <p id="player">
+                </p>
+        </h3>
         <h2>Enoncé question</h2>
         <button class="answer">
                 <p>Réponse 1</p>

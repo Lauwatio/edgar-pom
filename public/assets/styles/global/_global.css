@@ -64,4 +64,5 @@ body {
   top: 20px;
   font-size: 2rem;
   color: var(--blue);
+  z-index: 10;
 }
