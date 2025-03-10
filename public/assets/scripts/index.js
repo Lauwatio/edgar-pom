@@ -3,7 +3,7 @@ console.log("Made with 💛");
 // Exemple d'import de fonctions.
 // import { validateEmail } from "./utilis.js";
 
-
+let tableau = [];
 
 import { renderQuestion } from "./modules/getAllQuestions.js";
 
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => init());
 const init = () => {
   renderQuestion();
 };
+
 
 // crée un tableaux pour les joueurs
 
@@ -24,7 +25,7 @@ function mettreAJourJoueurs() {
       console.log(`${index}. ${joueurNom}`);
   });
 
-  let tableau = [];
+  tableau = [];
 
 
   list.forEach((input) => {
@@ -69,6 +70,23 @@ play.addEventListener("click", function(){
     answers.classList.replace("none", "block");
 });
 
-if (!players || !answers || !play) {
-  console.error("Un des éléments n'a pas été trouvé !");
+//Fonctionnement questionnaire
+
+const player = document.getElementById("player");
+const question = document.getElementById("question");
+const first = document.getElementById("first");
+const second = document.getElementById("second");
+const third = document.getElementById("third");
+
+player.innerHTML = tableau[0];
+
+let index = 0;
+
+
+question.innerHTML = renderQuestion;
+
+
+if (index >= tableau.length) {
+  index = 0; // revenir au début si on atteint la fin
 }
+console.log("ça c'est joueur 1" + tableau[0]);

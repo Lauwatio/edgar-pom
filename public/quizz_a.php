@@ -20,25 +20,24 @@ include_once "../includes/components/header.php";
         <input class="player" type="text" placeholder="Entrez le nom du joueur">
 
         </ul>
-        <button id="add" class="player">+</button>
+        <button id="add">+</button>
         <button id="play" >Jouer</button>
     </figcaption>
     
 
     <figcaption class="answers">
         <h3>Tour de 
-                <p id="player">
-                </p>
+                <p id="player"></p>
         </h3>
-        <h2>Enoncé question</h2>
+        <h2 id="question">Enoncé question</h2>
         <button class="answer">
-                <p>Réponse 1</p>
+                <p id="first">Réponse 1</p>
         </button>
         <button class="answer">
-                <p>Réponse 2</p>
+                <p id="second">Réponse 2</p>
         </button>
         <button class="answer">
-                <p>Réponse 3</p>
+                <p id="third">Réponse 3</p>
         </button>
         
         
