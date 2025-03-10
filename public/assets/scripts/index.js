@@ -11,15 +11,15 @@ const init = () => {
   renderQuestion();
 };
 
-const ajouter = document.getElementById("ajouter");
-const liste = document.getElementById("liste");
+const add = document.getElementById("add");
+const list = document.getElementById("list");
 
 
-ajouter.addEventListener("click", function () {
+add.addEventListener("click", function () {
   let input = document.createElement("input");
-  console.log(liste);
-  input.classList.add("joueur");
+  console.log(list);
+  input.classList.add("player");
   input.type = "text";
   input.placeholder = "Entrez le nom du joueur";
-  liste.append(input);
+  list.append(input);
 });

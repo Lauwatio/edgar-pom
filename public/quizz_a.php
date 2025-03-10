@@ -13,25 +13,25 @@ include_once "../includes/components/head.php";
   <main class="quizz-main">
     <h1>Quizz PomKorn</h1>
 
-    <figcaption class="joueurs">
+    <figcaption class="players">
         <h3>Joueurs</h3>
-        <input class="joueur" type="text" placeholder="Entrez le nom du joueur">
-        <ul id="liste">
+        <input id="" class="player" type="text" placeholder="Entrez le nom du joueur">
+        <ul id="list">
 
         </ul>
-        <button id="ajouter" class="joueur">+</button>
+        <button id="add" class="player">+</button>
     </figcaption>
 
-    <figcaption class="reponses">
+    <figcaption class="answers">
         <h3>Tour de ...</h3>
         <h2>Enoncé question</h2>
-        <button class="reponse">
+        <button class="answer">
                 <p>Réponse 1</p>
         </button>
-        <button class="reponse">
+        <button class="answer">
                 <p>Réponse 2</p>
         </button>
-        <button class="reponse">
+        <button class="answer">
                 <p>Réponse 3</p>
         </button>
         

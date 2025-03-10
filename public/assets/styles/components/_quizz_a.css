@@ -4,22 +4,22 @@
   --pink: #de3377;
   --green: #47de33;*/
 
-.quizz-main, .joueurs {
+.quizz-main, .players {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.reponses, .joueurs {
+.answers, .players {
     background-color: #de3377;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
     width: 90vw;
 }
-#liste {
+#list {
     width: 100%;
 }
-.reponse, .joueur {
+.answer, .player {
     background-color: var(--white);
     margin: 10px;
     padding: 10px;
@@ -29,6 +29,6 @@
     border-radius: 10px;
     font-size: 1rem;
 }
-.reponses {
+.answers {
     display: none;
 }
