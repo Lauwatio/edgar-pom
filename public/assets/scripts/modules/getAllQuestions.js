@@ -1,5 +1,5 @@
 // Récupérer nos éléments du DOM
-const wrapper = document.querySelector(".questions-wrapper");
+const enonce = document.getElementById("enonce");
 
 export const getAllQuestions = async () => {
   const response = await fetch("../includes/handlers/getAllQuestions.php");
@@ -10,7 +10,8 @@ export const getAllQuestions = async () => {
 export const renderQuestion = async () => {
   const questions = await getAllQuestions();
 
-  questions.forEach((question) => {
-    wrapper.innerHTML += `<li>id: ${question.id} - question : ${question.question}<li>`;
-  });
+  const randomIndex = Math.floor(Math.random() * questions.length);
+    const questionAleatoire = questions[randomIndex];
+
+    enonce.innerHTML = `Question : ${questionAleatoire.question}`;
 };

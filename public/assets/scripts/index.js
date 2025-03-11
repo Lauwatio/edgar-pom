@@ -7,6 +7,8 @@ let tableau = [];
 
 import { renderQuestion } from "./modules/getAllQuestions.js";
 
+console.log(renderQuestion());
+
 document.addEventListener("DOMContentLoaded", () => init());
 
 const init = () => {
@@ -82,8 +84,6 @@ player.innerHTML = tableau[0];
 
 let index = 0;
 
-
-question.innerHTML = renderQuestion;
 
 
 if (index >= tableau.length) {
