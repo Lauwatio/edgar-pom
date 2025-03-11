@@ -9,10 +9,20 @@ include_once "../includes/components/head.php";
 <body>
   <?php include_once "../includes/components/header.php" ?>
   <main>
-    <h1>Accueil</h1>
+    <span class="yellow">EDGAR<br>POM</span>
+    <h1 class="pink">EDGAR<br>POM</h1>
+    <span class="green">CIDRE<br>et JUS</span>
+    <img src="./assets/images/vache.png" alt="Vache des highlands">
 
     <div>
-      <ul class="questions-wrapper"></ul>
+      <a href="./" class="greenback">
+        <h2>AfterPom</h2>
+        <p>Pour les enfants !</p>
+      </a>
+      <a href="./" class="pinkback">
+        <h2>PomKorn</h2>
+        <p>Pour petits et grands !</p>
+      </a>
     </div>
   </main>
   <?php include_once "../includes/components/footer.php" ?>
