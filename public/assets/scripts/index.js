@@ -75,16 +75,10 @@ play.addEventListener("click", function(){
 //Fonctionnement questionnaire
 
 const player = document.getElementById("player");
-const question = document.getElementById("question");
-const first = document.getElementById("first");
-const second = document.getElementById("second");
-const third = document.getElementById("third");
 
 player.innerHTML = tableau[0];
 
 let index = 0;
-
-
 
 if (index >= tableau.length) {
   index = 0; // revenir au début si on atteint la fin

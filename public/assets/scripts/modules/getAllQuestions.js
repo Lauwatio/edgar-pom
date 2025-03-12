@@ -1,5 +1,8 @@
 // Récupérer nos éléments du DOM
 const enonce = document.getElementById("enonce");
+const first = document.getElementById("first");
+const second = document.getElementById("second");
+const third = document.getElementById("third");
 
 export const getAllQuestions = async () => {
   const response = await fetch("../includes/handlers/getAllQuestions.php");
@@ -14,4 +17,6 @@ export const renderQuestion = async () => {
     const questionAleatoire = questions[randomIndex];
 
     enonce.innerHTML = `Question : ${questionAleatoire.question}`;
+    first.innerHTML = `${questions.reponse1}`;
+
 };
