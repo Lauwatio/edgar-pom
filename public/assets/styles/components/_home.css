@@ -16,6 +16,9 @@ body, .home, .home-menu {
     text-align: center;
     width: 100%;
 }
+.home {
+    margin: 0;
+}
 span, body, .home, .home-image {
     position: fixed;
 }
@@ -54,7 +57,13 @@ h1, span {
     width: 90%;
     text-decoration: none;
 }
-.greenback {
+.playlist {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+.greenback, .playlist {
     background-color: var(--green);
 }
 .pinkback {

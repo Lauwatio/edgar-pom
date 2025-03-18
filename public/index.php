@@ -23,6 +23,10 @@ include_once "../includes/components/head.php";
         <h2>PomKorn</h2>
         <p>Pour petits et grands !</p>
       </a>
+      <a href="https://open.spotify.com/playlist/3WX781fjXwCbN2WKaQBMzY?si=7cqJ7Us4TcuRa0zxOifOEg" class="playlist">
+        <h2>Pomlist</h2>
+        <p>Sur Spotify</p>
+      </a>
     </div>
   </main>
   

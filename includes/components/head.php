@@ -13,15 +13,15 @@ $actual_url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_
 
   <!-- Favicon -->
   <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="16x16">
-  <link href="assets/images/favicons/favicon-32.png" rel="icon" sizes="32x32">
-  <link href="assets/images/favicons/favicon-57.png" rel="icon" sizes="57x57">
-  <link href="assets/images/favicons/favicon-76.png" rel="icon" sizes="76x76">
-  <link href="assets/images/favicons/favicon-96.png" rel="icon" sizes="96x96">
-  <link href="assets/images/favicons/favicon-128.png" rel="icon" sizes="128x128">
-  <link href="assets/images/favicons/favicon-180.png" rel="apple-touch-icon">
-  <link href="assets/images/favicons/favicon-192.png" rel="icon" sizes="192x192">
-  <link href="assets/images/favicons/favicon-228.png" rel="icon" sizes="228x228">
-  <link href="assets/images/favicons/favicon-512.png" rel="icon" sizes="512x512">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="32x32">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="57x57">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="76x76">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="96x96">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="128x128">
+  <link href="assets/images/favicons/favicon-16.png" rel="apple-touch-icon">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="192x192">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="228x228">
+  <link href="assets/images/favicons/favicon-16.png" rel="icon" sizes="512x512">
 
   <!-- Metadata Opengraph for Facebook -->
   <meta property="og:type" content="website" />
