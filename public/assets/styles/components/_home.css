@@ -1,74 +1,81 @@
-  /* COLORS 
-  --yellow: #feeb25;
-  --blue: #282e69;
-  --pink: #de3377;
-  --green: #47de33;*/
 html {
-    
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-body, .home, .home-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+body,
+.home,
+.home-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 .home {
-    margin: 0;
+  margin: 0;
 }
-span, body, .home, .home-image {
-    position: fixed;
+span,
+body,
+.home,
+.home-image {
+  position: fixed;
 }
 .pink {
-    color: var(--pink);
-    z-index: 1;
-    margin-top: 5rem;
-    font-size: 5rem;
-    line-height: 80%;
+  color: var(--pink);
+  z-index: 1;
+  margin-top: 5rem;
+  font-size: 5rem;
+  line-height: 80%;
 }
+
 .yellow {
-    color: var(--yellow);
-    font-size: 7rem;
-    font-family: var(--heading-font);
-    z-index: 0;
-    line-height: 80%;
-    margin-top: 4rem;
+  color: var(--yellow);
+  font-size: 7rem;
+  font-family: var(--heading-font);
+  z-index: 0;
+  line-height: 80%;
+  margin-top: 4rem;
 }
+
 .green {
-    color: var(--green);
-    z-index: 3;
-    font-size: 3rem;
-    margin-top: 11rem;
-    line-height: 80%;
+  color: var(--green);
+  z-index: 3;
+  font-size: 3rem;
+  margin-top: 11rem;
+  line-height: 80%;
 }
+
 .home-image {
-    margin-top: 14rem;
+  margin-top: 14rem;
 }
-h1, span {
-    mix-blend-mode: multiply;
+
+.pink,
+.yellow,
+.green {
+  mix-blend-mode: multiply;
 }
-.greenback, .pinkback {
-    padding: 20px;
-    margin: 5px;
-    border-radius: 20px;
-    width: 90%;
-    text-decoration: none;
+.greenback,
+.pinkback {
+  padding: 20px;
+  margin: 5px;
+  border-radius: 20px;
+  width: 90%;
+  text-decoration: none;
 }
 .playlist {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 20px;
-    margin-top: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-top: 5px;
 }
-.greenback, .playlist {
-    background-color: var(--green);
+.greenback,
+.playlist {
+  background-color: var(--green);
 }
 .pinkback {
-    background-color: var(--pink);
+  background-color: var(--pink);
 }
 .home-menu {
-    margin-top: 13.3rem;
+  margin-top: 13.3rem;
 }

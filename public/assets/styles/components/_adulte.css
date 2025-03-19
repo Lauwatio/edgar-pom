@@ -1,44 +1,39 @@
- /* COLORS 
-  --yellow: #feeb25;
-  --blue: #282e69;
-  --pink: #de3377;
-  --green: #47de33;*/
-
 html {
-    overflow: hidden;
+  overflow: hidden;
 }
 .yellowpom {
-    color: #feeb25;
-    font-size: 20rem;
-    rotate: -90deg;
-    position: fixed;
-    margin-top: 12rem;
-    z-index: 0;
+  color: var(--yellow);
+  font-size: 20rem;
+  rotate: -90deg;
+  position: fixed;
+  margin-top: 10rem;
+  font-family: var(--heading-font);
+  z-index: 0;
 }
 main {
-    margin-top: 2rem;
-    z-index: 1;
-    color: var(--blue);
+  margin-top: 2rem;
+  z-index: 1;
+  color: var(--blue);
 }
 .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .pinkcase {
-    border: solid 4px var(--pink);
+  border: solid 4px var(--pink);
 }
 .greencase {
-    border: solid 4px var(--green);
+  border: solid 4px var(--green);
 }
 .jeu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 40vw;
-    margin: 10px;
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  margin: 10px;
+  border-radius: 20px;
 }
