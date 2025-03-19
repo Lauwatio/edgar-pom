@@ -7,7 +7,7 @@ let tableau = [];
 
 import { renderQuestion } from "./modules/getAllQuestions.js";
 
-console.log(renderQuestion());
+// console.log(renderQuestion());
 
 document.addEventListener("DOMContentLoaded", () => init());
 
@@ -24,11 +24,16 @@ function mettreAJourJoueurs() {
   
   let list = document.querySelectorAll(".player");
 
+  console.log(list);
+
   list.forEach((input, index) => {
       let joueurNom = input.value.trim();
-      console.log(`${index}. ${joueurNom}`);
+      // console.log(`${index}. ${joueurNom}`);
       player.innerHTML = `${joueurNom}`;
+
   });
+
+
 
   tableau = [];
 
@@ -36,7 +41,7 @@ function mettreAJourJoueurs() {
       tableau.push(input.value);
       
   });
-  console.log(tableau);
+  // console.log(tableau);
 }
 
 
@@ -47,7 +52,7 @@ const list = document.getElementById("list");
 
 add.addEventListener("click", function () {
   let input = document.createElement("input");
-  console.log(list);
+  // console.log(list);
   input.classList.add("player");
   input.type = "text";
   input.placeholder = "Entrez le nom du joueur";
