@@ -29,15 +29,15 @@ include_once "../includes/components/header.php";
         <h3>Tour de 
                 <p id="player"></p>
         </h3>
-        <h2 id="enonce">Enoncé question</h2>
+        <h2 id="enonce"></h2>
         <button class="answer">
-                <p id="first">Réponse 1</p>
+                <p id="first"></p>
         </button>
         <button class="answer">
-                <p id="second">Réponse 2</p>
+                <p id="second"></p>
         </button>
         <button class="answer">
-                <p id="third">Réponse 3</p>
+                <p id="third"></p>
         </button>
         
         

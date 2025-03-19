@@ -15,6 +15,8 @@ const init = () => {
   renderQuestion();
 };
 
+const player = document.getElementById("player");
+
 
 // crée un tableaux pour les joueurs
 
@@ -25,14 +27,13 @@ function mettreAJourJoueurs() {
   list.forEach((input, index) => {
       let joueurNom = input.value.trim();
       console.log(`${index}. ${joueurNom}`);
+      player.innerHTML = `${joueurNom}`;
   });
 
   tableau = [];
 
-
   list.forEach((input) => {
-      let joueurNom = input.value;
-      tableau.push(joueurNom);
+      tableau.push(input.value);
       
   });
   console.log(tableau);
@@ -74,8 +75,6 @@ play.addEventListener("click", function(){
 
 //Fonctionnement questionnaire
 
-const player = document.getElementById("player");
-
 player.innerHTML = tableau[0];
 
 let index = 0;
@@ -83,4 +82,4 @@ let index = 0;
 if (index >= tableau.length) {
   index = 0; // revenir au début si on atteint la fin
 }
-console.log("ça c'est joueur 1" + tableau[0]);
+

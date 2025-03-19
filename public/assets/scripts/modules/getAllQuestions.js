@@ -17,6 +17,8 @@ export const renderQuestion = async () => {
     const questionAleatoire = questions[randomIndex];
 
     enonce.innerHTML = `Question : ${questionAleatoire.question}`;
-    first.innerHTML = `${questions.reponse1}`;
+    first.innerHTML = `${questionAleatoire.reponse1}`;
+    second.innerHTML = `${questionAleatoire.reponse2}`;
+    third.innerHTML = `${questionAleatoire.reponse3}`;
 
 };
