@@ -17,7 +17,7 @@ export const renderQuestions = async (joueurs) => {
   const questions = await getAllQuestions();
   const randomQuestions = [];
 
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 2; index++) {
     if (questions.length === 0) break;
 
     const randomIndex = Math.floor(Math.random() * questions.length);
@@ -38,10 +38,11 @@ const gestionPartie = (questions, joueurs) => {
   let joueursRestants = joueurs.length;
   let questionActuelle = questions[compteurQuestion];
 
-  let joueurActuel = joueurs[compteurJoueur];
-  player.innerText = joueurActuel.nom;
+  player.innerText = joueurs[compteurJoueur].nom;
 
   questionWrapper.addEventListener("click", (e) => {
+    let joueurActuel = joueurs[compteurJoueur];
+
     if (e.target.classList.contains("button-answer")) return;
     if (!e.target.hasAttribute("data-question-number")) return;
 
@@ -49,6 +50,7 @@ const gestionPartie = (questions, joueurs) => {
 
     if (questionActuelle.num_rep === nombreQuestion) {
       console.log("C'est gagné !");
+      console.log(joueurActuel, "win question");
       joueurActuel.pts++;
     } else {
       console.log("Mauvaise réponse !");
@@ -57,8 +59,6 @@ const gestionPartie = (questions, joueurs) => {
     // Passer au joueur suivant
     compteurJoueur++;
     joueursRestants--;
-
-    console.log(joueursRestants);
 
     if (joueursRestants === 0) {
       // Afficher la réponse après que tous les joueurs ont répondu
@@ -94,13 +94,24 @@ const gestionPartie = (questions, joueurs) => {
           }, 500);
         } else {
           console.log("Partie finito !");
+
+          const classement = joueurs.map((joueur) => {
+            return {
+              nom: joueur.nom,
+              pts: joueur.pts,
+            };
+          });
+
+          const shortClassement = classement.sort((a, b) => b.pts - a.pts); // Tri décroissant
+
+          console.log(shortClassement);
         }
       });
     } else {
       const player = document.getElementById("player");
 
       joueurActuel = joueurs[compteurJoueur];
-
+      console.log(joueurActuel, "next player");
       player.innerText = joueurActuel.nom;
     }
   });
