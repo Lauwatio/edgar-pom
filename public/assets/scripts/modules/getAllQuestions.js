@@ -67,7 +67,7 @@ const gestionPartie = (questions, joueurs) => {
       )?.[1];
 
       questionWrapper.innerHTML = `
-        <p class="result">La bonne réponse était :<br> ${bonneReponse}</p>
+        <p class="result">La bonne réponse était:<br> ${bonneReponse}</p>
         <p class="paragraph-answer">${questionActuelle.explication}</p>
         <button type="button" class="button-answer">Suite</button>
       `;
@@ -104,9 +104,14 @@ const gestionPartie = (questions, joueurs) => {
           questionWrapper.innerHTML = `
               <h2>Fin de la partie !</h2>
               <h3>Classement :</h3>
-              <ul class="classement">${classement
-                .map(joueur => `<li>${joueur.nom} : ${joueur.pts} pts</li>`)
-                .join('')}</ul>
+              <div class="relative">
+                <ul class="classement">
+                ${classement
+                .map(joueur => `<li class="relative">${joueur.nom}<br>${joueur.pts} pts</li>`)
+                .join('')}
+                </ul>
+                <img src="./assets/images/podium.png" alt="Podium">
+              </div>
 
               <a href="./adulte.php" class="button-home">Home</a>
             `;
