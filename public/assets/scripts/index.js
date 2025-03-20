@@ -4,10 +4,7 @@ console.log("Made with 💛");
 // import { validateEmail } from "./utilis.js";
 
 import { renderQuestions } from "./modules/getAllQuestions.js";
-import { renderDefis } from "./modules/getAllDefis.js";
-
-
-
+// import { renderDefis } from "./modules/getAllDefis.js";
 
 // console.log(renderQuestion());
 
@@ -17,7 +14,7 @@ const init = () => {
   let tableauJoueurs = [];
   let compteurJoueurs = 0;
 
-  const player = document.getElementById("player");
+  // const player = document.getElementById("player");
 
   // crée un tableaux pour les joueurs
   function mettreAJourJoueurs() {
@@ -58,10 +55,9 @@ const init = () => {
     renderQuestions(joueurs);
   }
 
-  function startGame(joueurs) {
-    renderDefis(joueurs);
-  }
-
+  // function startGame(joueurs) {
+  //   renderDefis(joueurs);
+  // }
 
   /* ajouter des joueurs */
   const add = document.getElementById("add");

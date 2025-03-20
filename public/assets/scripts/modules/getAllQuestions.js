@@ -93,7 +93,8 @@ const gestionPartie = (questions, joueurs) => {
             player.innerText = joueurs[compteurJoueur].nom;
           }, 500);
         } else {
-          
+          console.log("Partie finito !");
+
           const classement = joueurs.map((joueur) => {
             return {
               nom: joueur.nom,
@@ -101,26 +102,25 @@ const gestionPartie = (questions, joueurs) => {
             };
           });
 
+          const shortClassement = classement.sort((a, b) => b.pts - a.pts); // Tri décroissant
+
           questionWrapper.innerHTML = `
               <h2>Fin de la partie !</h2>
               <h3>Classement :</h3>
               <div class="relative">
                 <ul class="classement">
-                ${classement
-                .map(joueur => `<li class="relative">${joueur.nom}<br>${joueur.pts} pts</li>`)
-                .join('')}
+                ${shortClassement
+                  .map(
+                    (joueur) =>
+                      `<li class="relative">${joueur.nom}<br>${joueur.pts} pts</li>`
+                  )
+                  .join("")}
                 </ul>
                 <img src="./assets/images/podium.png" alt="Podium">
               </div>
 
-              <a href="./adulte.php" class="button-home">Home</a>
+              <a href="./adulte.php" class="button-home">Accueil</a>
             `;
-          console.log("Partie finito !");
-
-          
-          const shortClassement = classement.sort((a, b) => b.pts - a.pts); // Tri décroissant
-
-          console.log(shortClassement);
         }
       });
     } else {
