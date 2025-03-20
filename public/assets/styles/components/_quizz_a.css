@@ -56,17 +56,31 @@
 .answer,
 #play,
 #add,
-.button-answer {
+.button-answer, .button-home {
   cursor: pointer;
 }
 
+.button-home {
+  margin: 20px !important;
+}
+
 #play,
-.button-answer {
-  padding: 20px;
+.button-answer, .button-home {
+  padding: 10px 20px;
   background-color: var(--green);
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   color: var(--blue);
+  margin-top: 10px;
+}
+
+.classement, .result {
+  margin-bottom: 20px;
+}
+
+.result {
+  font-size: 1.5rem;
+  color: var(--green);
 }
 
 .paragraph-answer {

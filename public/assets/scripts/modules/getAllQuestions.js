@@ -67,9 +67,9 @@ const gestionPartie = (questions, joueurs) => {
       )?.[1];
 
       questionWrapper.innerHTML = `
-        <p class="result">La bonne réponse : ${bonneReponse}</p>
+        <p class="result">La bonne réponse était :<br> ${bonneReponse}</p>
         <p class="paragraph-answer">${questionActuelle.explication}</p>
-        <button type="button" class="button-answer">Question suivante</button>
+        <button type="button" class="button-answer">Suite</button>
       `;
 
       compteurJoueur = 0;
@@ -93,8 +93,7 @@ const gestionPartie = (questions, joueurs) => {
             player.innerText = joueurs[compteurJoueur].nom;
           }, 500);
         } else {
-          console.log("Partie finito !");
-
+          
           const classement = joueurs.map((joueur) => {
             return {
               nom: joueur.nom,
@@ -102,6 +101,18 @@ const gestionPartie = (questions, joueurs) => {
             };
           });
 
+          questionWrapper.innerHTML = `
+              <h2>Fin de la partie !</h2>
+              <h3>Classement :</h3>
+              <ul class="classement">${classement
+                .map(joueur => `<li>${joueur.nom} : ${joueur.pts} pts</li>`)
+                .join('')}</ul>
+
+              <a href="./adulte.php" class="button-home">Home</a>
+            `;
+          console.log("Partie finito !");
+
+          
           const shortClassement = classement.sort((a, b) => b.pts - a.pts); // Tri décroissant
 
           console.log(shortClassement);
