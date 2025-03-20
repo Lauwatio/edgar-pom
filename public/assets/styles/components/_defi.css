@@ -1,0 +1,13 @@
+.defi-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.defi {
+    background-color: var(--pink);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 90vw;
+  }

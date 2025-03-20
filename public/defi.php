@@ -11,13 +11,11 @@ include_once "../includes/components/header.php";
         <?php include_once "../includes/components/header_jeu_pomkorn.php" ?>
         <span class="yellowpom">POM</span>
 
-        <main class="quizz-main">
+        <main class="defi-main">
                 <h1>Défis <br> PomKorn</h1>
                 
-                <div class="answers">
-                        <h2>
-                                <span>Défi !</span>
-                        </h2>
+                <div class="defi">
+                        <h2>Défi !</h2>
                         <h3 id="defi"></h3>
                         
                 </div>
