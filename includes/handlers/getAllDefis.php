@@ -2,7 +2,7 @@
 
 include_once "../db/config.php";
 
-$sql = "SELECT * FROM questions_pomkorn";
+$sql = "SELECT * FROM defis_filme_toi";
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute();
