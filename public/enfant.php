@@ -13,7 +13,7 @@ include_once "../includes/components/head.php";
     <h1>AfterPom</h1>
     <p>Divertissez vos enfants !</p>
     <figcaption class="wrap">
-        <a class="jeu pinkcase" href="">
+        <a class="jeu pinkcase" href="./quizz_e.php">
                 <p>Quizz</p>
         </a>
         <a class="jeu greencase" href="">
