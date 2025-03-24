@@ -1,8 +1,8 @@
 // Récupérer nos éléments du DOM
-const enonce = document.getElementById("enonce");
-const first = document.getElementById("first");
-const second = document.getElementById("second");
-const third = document.getElementById("third");
+const enonce_e = document.getElementById("enonce_e");
+const first_e = document.getElementById("first_e");
+const second_e = document.getElementById("second_e");
+const third_e = document.getElementById("third_e");
 const player = document.getElementById("player");
 
 const questionWrapper = document.querySelector(".answers");
@@ -26,10 +26,10 @@ export const renderQuestions_e = async (joueurs_e) => {
 
   gestionPartie(randomQuestions, joueurs_e);
 
-  enonce.innerText = `Question : ${randomQuestions[0].question}`;
-  first.innerText = `${randomQuestions[0].reponse1}`;
-  second.innerText = `${randomQuestions[0].reponse2}`;
-  third.innerText = `${randomQuestions[0].reponse3}`;
+  enonce_e.innerText = `Question : ${randomQuestions[0].question}`;
+  first_e.innerText = `${randomQuestions[0].reponse1}`;
+  second_e.innerText = `${randomQuestions[0].reponse2}`;
+  third_e.innerText = `${randomQuestions[0].reponse3}`;
 };
 
 const gestionPartie = (questions, joueurs_e) => {
@@ -85,10 +85,10 @@ const gestionPartie = (questions, joueurs_e) => {
           setTimeout(() => {
             questionWrapper.innerHTML = `
               <h2>Tour de <span id='player'>${joueurs_e[compteurJoueur].nom}</span></h2>
-              <h3 id='enonce'>${questionActuelle.question}</h3>
-              <button class='answer' id='first' data-question-number='1'>${questionActuelle.reponse1}</button>
-              <button class='answer' id='second' data-question-number='2'>${questionActuelle.reponse2}</button>
-              <button class='answer' id='third' data-question-number='3'>${questionActuelle.reponse3}</button>
+              <h3 id='enonce_e'>${questionActuelle.question}</h3>
+              <button class='answer' id='first_e' data-question-number='1'>${questionActuelle.reponse1}</button>
+              <button class='answer' id='second_e' data-question-number='2'>${questionActuelle.reponse2}</button>
+              <button class='answer' id='third_e' data-question-number='3'>${questionActuelle.reponse3}</button>
             `;
             player.innerText = joueurs_e[compteurJoueur].nom;
           }, 500);

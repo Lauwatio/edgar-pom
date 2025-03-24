@@ -8,7 +8,7 @@ include_once "../includes/components/header.php";
 ?>
 
 <body>
-        <?php include_once "../includes/components/header_jeu_pomkorn.php" ?>
+        <?php include_once "../includes/components/header_jeu_afterpom.php" ?>
         <span class="yellowpom">POM</span>
 
         <main class="quizz-main">
@@ -29,12 +29,12 @@ include_once "../includes/components/header.php";
                                 <span>Tour de</span>
                                 <span id="player"></span>
                         </h2>
-                        <h3 id="enonce"></h3>
-                        <button class="answer" id="first" data-question-number="1">
+                        <h3 id="enonce_e"></h3>
+                        <button class="answer" id="first_e" data-question-number="1">
                         </button>
-                        <button class="answer" id="second" data-question-number="2">
+                        <button class="answer" id="second_e" data-question-number="2">
                         </button>
-                        <button class="answer" id="third" data-question-number="3">
+                        <button class="answer" id="third_e" data-question-number="3">
                         </button>
                 </div>
         </main>
