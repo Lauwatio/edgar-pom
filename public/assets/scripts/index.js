@@ -4,6 +4,9 @@ console.log("Made with 💛");
 // import { validateEmail } from "./utilis.js";
 
 import { renderQuestions } from "./modules/getAllQuestions.js";
+
+import { renderQuestions_e } from "./modules/getAllQuestions_e.js";
+
 // import { renderDefis } from "./modules/getAllDefis.js";
 
 // console.log(renderQuestion());
@@ -55,6 +58,10 @@ const init = () => {
     renderQuestions(joueurs);
   }
 
+  function startGame_e(joueurs_e) {
+    renderQuestions_e(joueurs_e);
+  }
+
   // function startGame(joueurs) {
   //   renderDefis(joueurs);
   // }
@@ -92,5 +99,6 @@ const init = () => {
     answers.classList.replace("none", "block");
 
     startGame(tableauJoueurs);
+    startGame_e(tableauJoueurs);
   });
 };
