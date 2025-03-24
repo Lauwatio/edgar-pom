@@ -3,13 +3,13 @@
   "background_color": "#fefefe",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/edgar-pom/public/index.php",
   "short_name": "Edgar Play",
   "name": "Edgar Play",
   "description": "Edgar Play",
   "icons": [
     {
-      "src": "assets/images/favicons/favicon-512.png",
+      "src": "assets/images/favicons/favicon-192.png",
       "sizes": "512x512",
       "type": "image/png"
     },

@@ -30,7 +30,7 @@ $actual_url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_
   <meta property="og:site_name" content="<?php echo isset($title) ? "$title | Edgar Play" : "Edgar Play" ?>" />
   <meta property="og:description" content="<?php echo isset($description) ? $description : "" ?>" />
   <meta property="og:image"
-    content="<?php echo isset($thumbnail_seo) ? $thumbnail_seo : "$base_url/assets/images/favicons/favicon-512.png" ?>" />
+    content="<?php echo isset($thumbnail_seo) ? $thumbnail_seo : "$base_url/assets/images/favicons/favicon-192.png" ?>" />
 
   <!-- Metadata for Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
@@ -38,7 +38,7 @@ $actual_url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_
   <meta property="twitter:title" content="<?php echo isset($title) ? "$title | Edgar Play" : "Edgar Play" ?>" />
   <meta property="twitter:description" content="<?php echo isset($description) ? $description : "" ?>" />
   <meta property="twitter:image"
-    content="<?php echo isset($thumbnail_seo) ? $thumbnail_seo : "$base_url/assets/images/favicons/favicon-512.png" ?>" />
+    content="<?php echo isset($thumbnail_seo) ? $thumbnail_seo : "$base_url/assets/images/favicons/favicon-192.png" ?>" />
 
   <!-- Scripts and styles -->
   <script defer src="assets/scripts/index.js" type="module"></script>

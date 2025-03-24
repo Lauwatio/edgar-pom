@@ -30,7 +30,7 @@ loadEnvVariables(__DIR__ . '/.env');
 // Exemple d'accès à une variable d'environnement
 $dbHost = getenv('DB_HOST');
 $dbUser = getenv('DB_USER');
-$dbPass = getenv('DB_PASS');
+$dbPass = getenv('DB_PASSWORD');
 $dbName = getenv('DB_NAME');
 
 // Connexion à la base de données
