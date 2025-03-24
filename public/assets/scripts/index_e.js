@@ -3,8 +3,9 @@ console.log("Made with 💛");
 // Exemple d'import de fonctions.
 // import { validateEmail } from "./utilis.js";
 
-import { renderQuestions } from "./modules/getAllQuestions.js";
 
+
+import { renderQuestions_e } from "./modules/getAllQuestions_e.js";
 
 // import { renderDefis } from "./modules/getAllDefis.js";
 
@@ -53,11 +54,11 @@ const init = () => {
 
   mettreAJourJoueurs();
 
-  function startGame(joueurs) {
-    renderQuestions(joueurs);
+
+  function startGame_e(joueurs_e) {
+    renderQuestions_e(joueurs_e);
   }
 
- 
   // function startGame(joueurs) {
   //   renderDefis(joueurs);
   // }
@@ -94,7 +95,7 @@ const init = () => {
     players.classList.replace("block", "none");
     answers.classList.replace("none", "block");
 
-    startGame(tableauJoueurs);
   
+    startGame_e(tableauJoueurs);
   });
 };

@@ -3,7 +3,7 @@
 <?php
 $title = "AfterPom Quizz";
 $descript = "";
-include_once "../includes/components/head.php";
+include_once "../includes/components/head_e.php";
 include_once "../includes/components/header.php";
 ?>
 
