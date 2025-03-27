@@ -6,7 +6,6 @@ console.log("Made with 💛");
 import { renderQuestions } from "./modules/getAllQuestions.js";
 
 
-// import { renderDefis } from "./modules/getAllDefis.js";
 
 // console.log(renderQuestion());
 
@@ -57,10 +56,6 @@ const init = () => {
     renderQuestions(joueurs);
   }
 
- 
-  // function startGame(joueurs) {
-  //   renderDefis(joueurs);
-  // }
 
   /* ajouter des joueurs */
   const add = document.getElementById("add");
