@@ -9,6 +9,4 @@ import { renderDefis } from "./modules/getAllDefis.js";
 
 // console.log(renderQuestion());
 
-document.addEventListener("DOMContentLoaded", () => init());
-
-renderDefis(joueurs);
+renderDefis();

@@ -19,7 +19,7 @@ include_once "../includes/components/head.php";
                         <a class="jeu greencase" href="">
                                 <p>Blind Test</p>
                         </a>
-                        <a class="jeu greencase" href="./defi.php">
+                        <a class="jeu greencase" href="./defis.php">
                                 <p>Défi filmez vous !</p>
                         </a>
                         <a class="jeu pinkcase" href="">
