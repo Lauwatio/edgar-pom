@@ -41,17 +41,30 @@ function showPlayerSetup() {
   };
 }
 
-// Étape 2 : tour d’un joueur
+
+let answersThisRound = []; // pour stocker les réponses à cette question
+
+
 function showTurn() {
   const player = players[currentPlayerIndex];
   const question = questions[currentQuestionIndex];
 
   app.innerHTML = `
     <h2>${player.name}, c’est à toi de jouer !</h2>
-    <audio controls autoplay>
-        <source src="${question.audio}" type="audio/mpeg">
-        Ton navigateur ne supporte pas l'audio.
-    </audio>
+    <div class="custom-player">
+  <div class="player-controls">
+   <input type="range" id="seek-bar" value="0" min="0" step="1">
+  <audio id="audio-player" src="${question.audio}"></audio>
+    <div class="time-info">
+      <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    </div>
+    <button id="play-btn">▶️</button>
+  </div>
+  
+</div>
+
+
+
     <form id="question-form">
       ${[question.choice_1, question.choice_2, question.choice_3].map((c, i) => `
         <label>
@@ -61,39 +74,88 @@ function showTurn() {
       <button type="submit">Valider</button>
     </form>
   `;
+  const audio = document.getElementById('audio-player');
+const playBtn = document.getElementById('play-btn');
+const seekBar = document.getElementById('seek-bar');
+const currentTime = document.getElementById('current-time');
+const duration = document.getElementById('duration');
+
+// Charge durée totale une fois l'audio prêt
+audio.onloadedmetadata = () => {
+  seekBar.max = Math.floor(audio.duration);
+  duration.textContent = formatTime(audio.duration);
+};
+
+// Play / Pause toggle
+playBtn.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = '⏸️';
+  } else {
+    audio.pause();
+    playBtn.textContent = '▶️';
+  }
+};
+
+// Met à jour la barre et le temps
+audio.ontimeupdate = () => {
+  seekBar.value = Math.floor(audio.currentTime);
+  currentTime.textContent = formatTime(audio.currentTime);
+};
+
+// Navigation manuelle dans la barre
+seekBar.oninput = () => {
+  audio.currentTime = seekBar.value;
+};
+
+// Formatage du temps mm:ss
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+  return `${minutes}:${seconds}`;
+}
+
 
   document.getElementById('question-form').onsubmit = (e) => {
     e.preventDefault();
     const selected = document.querySelector('input[name="answer"]:checked');
     const answer = parseInt(selected.value);
-    const correct = question.correct_answer;
+    answersThisRound.push({ playerIndex: currentPlayerIndex, answer });
 
-    if (answer === correct) {
-      players[currentPlayerIndex].score++;
+    currentPlayerIndex++;
+
+    if (currentPlayerIndex < players.length) {
+      showTurn(); // joueur suivant
+    } else {
+      showAnswerFeedback(); // tous les joueurs ont répondu
     }
-
-    showAnswerFeedback(answer, correct);
   };
 }
 
-// Étape 3 : feedback de la réponse
-function showAnswerFeedback(userAnswer, correctAnswer) {
+function showAnswerFeedback() {
   const question = questions[currentQuestionIndex];
-  const correctText = [question.choice_1, question.choice_2, question.choice_3][correctAnswer];
+  const correct = question.correct_answer;
+  const correctText = [question.choice_1, question.choice_2, question.choice_3][correct];
 
-  const feedbackHTML = `
-    <p><strong>Bonne réponse :</strong> ${correctText}</p>
-    <button id="next-turn">Continuer</button>
-  `;
-  app.innerHTML += feedbackHTML;
+  let resultHTML = `<h3>Bonne réponse : ${correctText}</h3>`;
 
-  document.getElementById('next-turn').onclick = () => {
-    currentPlayerIndex++;
-
-    if (currentPlayerIndex >= players.length) {
-      currentPlayerIndex = 0;
-      currentQuestionIndex++;
+  // Met à jour les scores et affiche qui a bien répondu
+  answersThisRound.forEach(entry => {
+    const player = players[entry.playerIndex];
+    const isCorrect = entry.answer === correct;
+    if (isCorrect) {
+      player.score++;
     }
+    resultHTML += `<p>${player.name} : ${isCorrect ? "✅ Bonne réponse !" : "❌ Faux"}</p>`;
+  });
+
+  resultHTML += `<button id="next-question">Question suivante</button>`;
+  app.innerHTML = resultHTML;
+
+  document.getElementById('next-question').onclick = () => {
+    currentPlayerIndex = 0;
+    currentQuestionIndex++;
+    answersThisRound = [];
 
     if (currentQuestionIndex >= questions.length) {
       showFinalScore();
