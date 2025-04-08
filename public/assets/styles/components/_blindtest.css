@@ -1,64 +1,316 @@
-.custom-player {
-    background-color: #ffe924;
-    padding: 16px;
-    border-radius: 16px;
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-    max-width: 450px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  #play-btn {
-    background-color: #1e2eaa;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 22px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #play-btn:hover {
-    background-color: #0f1b82;
-  }
+/* === Fond général === */
+.page-blindtest {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  color: #1e2eaa;
+  position: relative;
+}
 
-  .player-controls{}
-  
-  #seek-bar {
-    width: 100%;
-    height: 8px;
-    border-radius: 10px;
-    appearance: none;
-    background-color: #ddd;
-    accent-color: black;
-    cursor: pointer;
-  }
-  
-  #seek-bar::-webkit-slider-thumb,
-  #seek-bar::-moz-range-thumb {
-    background: black;
-    border: none;
-    border-radius: 50%;
-    width: 14px;
-    height: 14px;
-    appearance: none;
-  }
-  
-  .time-info {
-    display: flex;
-    justify-content:space-around;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  
+/* === Grand texte en arrière-plan === */
+.page-blindtest::before {
+  content: "POMKORN";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 35vw;
+  color: #ffe924;
+  font-weight: 900;
+  z-index: 0;
+  line-height: 1;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* === En-tête === */
+.page-blindtest .page-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+
+.page-blindtest .back-btn {
+  position: absolute;
+  left: 16px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #1e2eaa;
+  font-weight: bold;
+}
+
+.page-blindtest .page-title {
+  text-align: center;
+  color: #1e2eaa;
+}
+
+.page-blindtest .page-title h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.page-blindtest .page-title h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* === Carte rose commune === */
+.page-blindtest .quiz-card {
+  background-color: #ea3d7d;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 360px;
+  margin: 20px auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+/* === Titre dans les cartes === */
+.page-blindtest .quiz-card h2 {
+  color: #1e2eaa;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* === Liste des joueurs === */
+.page-blindtest .player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  color: #1e2eaa;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-blindtest .player-list li {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* === Champ texte === */
+.page-blindtest input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* === Bouton + === */
+.page-blindtest .add-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  color: #1e2eaa;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+/* === Bouton Jouer / Valider === */
+.page-blindtest .start-btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #d6d6d6;
+  color: #444;
+  border: none;
+  border-radius: 10px;
+  cursor: not-allowed;
+}
+
+.page-blindtest .start-btn:enabled {
+  background-color: #ffe924;
+  color: #1e2eaa;
+  cursor: pointer;
+}
+
+/* === Lecteur audio custom === */
+.page-blindtest .custom-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffe924;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.page-blindtest #seek-bar {
+  flex-grow: 1;
+  height: 8px;
+  border-radius: 10px;
+  appearance: none;
+  background-color: #ddd;
+  accent-color: black;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.page-blindtest #seek-bar::-webkit-slider-thumb,
+.page-blindtest #seek-bar::-moz-range-thumb {
+  background: black;
+  border: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  appearance: none;
+}
+
+.page-blindtest .time-info {
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 80px;
+  height: 20px;
+  line-height: 1.2;
+}
+
+.page-blindtest .time {
+  position: inherit;
+}
+
+/* === Bouton Play / Pause custom === */
+.page-blindtest .player-toggle {
+  width: 48px;
+  height: 48px;
+  background-color: #1e2eaa;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.page-blindtest .player-toggle::before,
+.page-blindtest .player-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+/* ▶️ triangle */
+.page-blindtest .player-toggle::before {
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid white;
+}
+
+/* ❚❚ pause */
+.page-blindtest .playing.player-toggle::before {
+  width: 6px;
+  height: 20px;
+  left: 14px;
+  background: white;
+  border: none;
+  transform: translateY(-50%);
+}
+
+.page-blindtest .playing.player-toggle::after {
+  content: '';
+  width: 6px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 26px;
+  transform: translateY(-50%);
+}
+
+/* === Réponses personnalisées === */
+.page-blindtest .custom-radio {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+.page-blindtest .custom-radio input[type="radio"] {
+  display: none;
+}
+/* Conteneur des options */
+/* Groupe de réponses bien contenues */
+.page-blindtest .answer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Case réponse */
+.page-blindtest .custom-radio {
+  display: block;
+  width: 100%;
+}
+
+.page-blindtest .custom-radio input[type="radio"] {
+  display: none;
+}
+
+.page-blindtest .radio-box {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #1e2eaa;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.page-blindtest .custom-radio input:checked + .radio-box {
+  background-color: #ffe924;
+  color: #1e2eaa;
+  border-color: #1e2eaa;
+}
+
+/* Valider */
+.page-blindtest .validate-btn {
+  width: 100%;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #ffe924;
+  color: #1e2eaa;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 12px;
+}

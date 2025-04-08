@@ -9,7 +9,7 @@ $descript = "";
 include_once "../includes/components/head.php";
 include "../includes/db/config.php"
 ?>
-<body>
+<body class="page-blindtest">
 <?php
 $stmt = $pdo->query("SELECT * FROM questions ORDER BY RAND() LIMIT 10");
 $questions = $stmt->fetchAll(PDO::FETCH_ASSOC);

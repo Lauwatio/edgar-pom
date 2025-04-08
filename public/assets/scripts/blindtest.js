@@ -7,16 +7,26 @@ const app = document.getElementById('app');
 // Étape 1 : interface d’ajout des joueurs
 function showPlayerSetup() {
   app.innerHTML = `
-    <div id="setup">
-      <h2>Ajouter les joueurs</h2>
-      <form id="player-form">
-        <input type="text" id="player-input" placeholder="Pseudo joueur" required>
-        <button type="submit">Ajouter</button>
-      </form>
-      <ul id="player-list"></ul>
-      <button id="start-game" disabled>Démarrer la partie</button>
+  <div class="page-header">
+    <a href="index.php" class="back-btn">⏴</a>
+    <div class="page-title">
+      <h1>Blind Test</h1>
+      <h2>PomKorn</h2>
     </div>
-  `;
+  </div>
+
+  <div class="quiz-card">
+    <h2>Joueurs</h2>
+    <ul id="player-list" class="player-list"></ul>
+    <form id="player-form">
+      <input type="text" id="player-input" placeholder="Entrez le nom du joueur" required>
+      <button type="submit" class="add-btn">+</button>
+    </form>
+    <button id="start-game" disabled class="start-btn">Jouer</button>
+  </div>
+`;
+
+
 
   const form = document.getElementById('player-form');
   const input = document.getElementById('player-input');
@@ -35,6 +45,7 @@ function showPlayerSetup() {
       if (players.length > 0) startButton.disabled = false;
     }
   };
+  
 
   startButton.onclick = () => {
     showTurn();
@@ -50,30 +61,36 @@ function showTurn() {
   const question = questions[currentQuestionIndex];
 
   app.innerHTML = `
+  <div class="quiz-card">
     <h2>${player.name}, c’est à toi de jouer !</h2>
+
     <div class="custom-player">
-  <div class="player-controls">
-   <input type="range" id="seek-bar" value="0" min="0" step="1">
-  <audio id="audio-player" src="${question.audio}"></audio>
-    <div class="time-info">
-      <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+      <span id="play-btn" class="player-toggle"></span>
+      <input type="range" id="seek-bar" value="0" min="0" step="1">
+      <div class="time-info">
+        <span id="current-time" class="time">0:00</span>
+        <span class="time">/</span>
+        <span id="duration" class="time">0:00</span>
+      </div>
+      <audio id="audio-player" src="${question.audio}"></audio>
     </div>
-    <button id="play-btn">▶️</button>
+
+   <form id="question-form">
+  <div class="answer-group">
+    ${[question.choice_1, question.choice_2, question.choice_3].map((c, i) => `
+      <label class="custom-radio">
+        <input type="radio" name="answer" value="${i}" required>
+        <span class="radio-box">${c}</span>
+      </label>
+    `).join('')}
   </div>
-  
-</div>
+  <button type="submit" class="validate-btn">Valider</button>
+</form>
 
 
+  </div>
+`;
 
-    <form id="question-form">
-      ${[question.choice_1, question.choice_2, question.choice_3].map((c, i) => `
-        <label>
-          <input type="radio" name="answer" value="${i}" required> ${c}
-        </label><br>
-      `).join('')}
-      <button type="submit">Valider</button>
-    </form>
-  `;
   const audio = document.getElementById('audio-player');
 const playBtn = document.getElementById('play-btn');
 const seekBar = document.getElementById('seek-bar');
@@ -90,12 +107,13 @@ audio.onloadedmetadata = () => {
 playBtn.onclick = () => {
   if (audio.paused) {
     audio.play();
-    playBtn.textContent = '⏸️';
+    playBtn.classList.add('playing');
   } else {
     audio.pause();
-    playBtn.textContent = '▶️';
+    playBtn.classList.remove('playing');
   }
 };
+
 
 // Met à jour la barre et le temps
 audio.ontimeupdate = () => {
