@@ -12,6 +12,9 @@ body,
   text-align: center;
   width: 100%;
 }
+body {
+  background-color: white;
+}
 .home {
   margin: 0;
 }
@@ -47,7 +50,8 @@ body,
 }
 
 .home-image {
-  margin-top: 14rem;
+  margin-top: 13rem;
+  width: 90%;
 }
 
 .pink,
@@ -71,11 +75,11 @@ body,
 }
 .greenback,
 .playlist {
-  background-color: var(--green);
+  border: solid 5px var(--green);
 }
 .pinkback {
-  background-color: var(--pink);
+  border: solid 5px var(--pink);
 }
 .home-menu {
-  margin-top: 13.3rem;
+  margin-top: 10rem;
 }
