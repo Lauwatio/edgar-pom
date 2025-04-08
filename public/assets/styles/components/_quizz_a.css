@@ -65,7 +65,7 @@
 }
 
 #play,
-.button-answer, .button-home {
+.button-answer, .button-home, #buttonSuit {
   padding: 10px 20px;
   background-color: var(--green);
   border: none;

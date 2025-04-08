@@ -24,7 +24,8 @@ const suivant = (defi, defis) => {
 
     defi.innerHTML = `
       <p>Défi : ${randomDefi.defis}</p>
-      <button type="button" id="buttonSuit" class="button-suit">Défi Suivant</button>
+      <img style="width : 70%;" src="${randomDefi.image}" alt="défis">
+      <button type="button" id="buttonSuit" >Défi Suivant</button>
     `;
 
     // Re-sélection du bouton fraîchement injecté
