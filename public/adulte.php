@@ -22,10 +22,6 @@ include_once "../includes/components/head.php";
                         <a class="jeu greencase" href="./defis.php">
                                 <p>Défi filmez vous !</p>
                         </a>
-                        <a class="jeu pinkcase" href="">
-                                <p>Quizz</p>
-                        </a>
-
                 </div>
         </main>
         <?php include_once "../includes/components/footer.php" ?>
