@@ -8,7 +8,7 @@ const app = document.getElementById('app');
 function showPlayerSetup() {
   app.innerHTML = `
   <div class="page-header">
-    <a href="index.php" class="back-btn">⏴</a>
+    <a href="adulte.php" class="back-btn">⏴</a>
     <div class="page-title">
       <h1>Blind Test</h1>
       <h2>PomKorn</h2>
