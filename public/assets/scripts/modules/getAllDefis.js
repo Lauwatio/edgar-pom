@@ -16,39 +16,35 @@ export const getAllDefis = async () => {
   }
 };
 
-const buttonSuit = document.querySelector(".button-suit");
+
+const suivant = (defi, defis) => {
+  if (defis.length > 0) {
+    const randomIndex = Math.floor(Math.random() * defis.length);
+    const randomDefi = defis[randomIndex];
+
+    defi.innerHTML = `
+      <p>Défi : ${randomDefi.defis}</p>
+      <img style="width : 70%;" src="${randomDefi.image}" alt="défis">
+      <button type="button" id="buttonSuit" >Défi Suivant</button>
+    `;
+
+    // Re-sélection du bouton fraîchement injecté
+    const buttonSuit = document.getElementById("buttonSuit");
+    buttonSuit?.addEventListener("click", () => {
+      suivant(defi, defis); // on rappelle avec le tableau original
+    });
+  } else {
+    defi.innerText = "Aucun défi disponible 😢";
+  }
+};
 
 export const renderDefis = async () => {
   const defis = await getAllDefis();
-
   console.log("📦 Données reçues depuis l'API :", defis);
 
-  const randomDefis = [];
-
-    const randomIndex = Math.floor(Math.random() * defis.length);
-    randomDefis.push(defis.splice(randomIndex, 1)[0]);
-
-if (randomDefis.length > 0 && randomDefis[0]?.defis) {
-  defi.innerText = `Défi : ${randomDefis[0].defis}
-  <button type="button" class="button-suit">Défis Suivant</button>`
-  ;
-} else {
-  defi.innerText = "Aucun défi disponible 😢";
-}
-
-buttonSuit?.addEventListener("click", () => {
-  if (compteurQuestion < questions.length) {
-    questionActuelle = questions[compteurQuestion];
-
-    
-      defi.innerHTML = `Défi : ${randomDefis[0].defis}
-      <button type="button" class="button-suit">Défi Suivant</button>`;
-    }
-  })
-  
-
-
+  suivant(defi, defis); // on démarre l'affichage
 };
+
 
 
 

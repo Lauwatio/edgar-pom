@@ -1,6 +1,4 @@
-html {
-  overflow: hidden;
-}
+
 .yellowpom {
   color: var(--yellow);
   font-size: 20rem;
@@ -32,8 +30,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40vw;
-  height: 40vw;
-  margin: 10px;
+  width: 90%;
+  margin:10px 0 0 0;
+  padding: 10px;
   border-radius: 20px;
 }
