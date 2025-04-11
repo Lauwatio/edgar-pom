@@ -15,14 +15,34 @@ include_once "../includes/components/head.php";
     <img class="home-image" src="./assets/images/vache.png" alt="Vache des highlands">
 
     <div class="home-menu">
-      <a href="./enfant.php" class="greenback">
+      <div class="greenback">
         <h2>AfterPom <i class="fa-solid fa-dice"></i></h2>
         <p>Pour les enfants !</p>
-      </a>
-      <a href="./adulte.php" class="pinkback">
+        <figcaption class="wrap">
+        <a class="jeu greencase" href="./quizz_e.php">
+                <p>Quizz</p>
+        </a>
+        <a class="jeu greencase" href="">
+                <p>Blind Test</p>
+        </a>
+        
+      </figcaption>
+      </div>
+      <div class="pinkback">
         <h2>PomKorn <i class="fa-solid fa-dice"></i></h2>
         <p>Pour petits et grands !</p>
-      </a>
+        <figcaption class="wrap">
+                        <a class="jeu pinkcase" href="./quizz_a.php">
+                                <p>Quizz</p>
+                        </a>
+                        <a class="jeu greencase" href="./blindtest.php">
+                                <p>Blind Test</p>
+                        </a>
+                        <a class="jeu greencase" href="./defis.php">
+                                <p>Défi filmez vous !</p>
+                        </a>
+                </f>
+      </div>
       <a href="https://open.spotify.com/playlist/3WX781fjXwCbN2WKaQBMzY?si=7cqJ7Us4TcuRa0zxOifOEg" class="playlist">
         <h2>Pomlist <i class="fa-solid fa-music"></i></h2>
         <p>Sur Spotify <i class="fa-brands fa-spotify"></i></p>
