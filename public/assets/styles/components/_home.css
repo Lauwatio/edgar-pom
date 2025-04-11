@@ -1,6 +1,7 @@
-html {
+html, #body-home {
   height: 100vh;
   width: 100vw;
+  overflow: auto !important
 }
 body,
 .home,
@@ -18,7 +19,6 @@ body {
   margin: 0;
 }
 span,
-body,
 .home,
 .home-image {
   position: fixed;
@@ -67,16 +67,18 @@ body,
   text-decoration: none;
 }
 .playlist {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 20px;
-  margin-top: 5px;
+  padding: 0 15px 0 30px;
+  font-size: 3rem;
+  border-radius:0 50px 50px 0;
+  position: fixed;
+  left: -5px;
+  top: 15rem;
 }
-.greenback,
-.playlist {
+.greenback {
   border: solid 5px var(--green);
 }
-.pinkback {
+.pinkback,
+.playlist {
   border: solid 5px var(--pink);
 }
 .home-menu {

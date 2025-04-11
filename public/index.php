@@ -41,8 +41,7 @@ include_once "../includes/components/head.php";
                 </f>
       </div>
       <a href="https://open.spotify.com/playlist/3WX781fjXwCbN2WKaQBMzY?si=7cqJ7Us4TcuRa0zxOifOEg" class="playlist">
-        <h2>Pomlist <i class="fa-solid fa-music"></i></h2>
-        <p>Sur Spotify <i class="fa-brands fa-spotify"></i></p>
+        <i class="fa-brands fa-spotify"></i>
       </a>
     </div>
   </main>
