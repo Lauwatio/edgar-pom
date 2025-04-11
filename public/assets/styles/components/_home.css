@@ -26,7 +26,7 @@ body,
 .pink {
   color: var(--pink);
   z-index: 1;
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 5rem;
   line-height: 80%;
 }
@@ -37,19 +37,19 @@ body,
   font-family: var(--heading-font);
   z-index: 0;
   line-height: 80%;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .green {
   color: var(--green);
   z-index: 3;
   font-size: 3rem;
-  margin-top: 11rem;
+  margin-top: 8rem;
   line-height: 80%;
 }
 
 .home-image {
-  margin-top: 13rem;
+  margin-top: 9rem;
   width: 90%;
 }
 
@@ -80,5 +80,38 @@ body,
   border: solid 5px var(--pink);
 }
 .home-menu {
-  margin-top: 10rem;
+  margin-top: 11rem;
+}
+#non {
+  display: none;
+}
+
+@media screen and (min-width: 440px) {
+
+.home {
+  display: none;
+}
+
+#non {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  flex-direction: column;
+}
+#non img {
+  width: 300px;
+}
+#non div {
+  border: solid 3px var(--blue);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+#non div p {
+  font-size: xx-large;
+}
 }

@@ -35,10 +35,10 @@ include_once "../includes/components/head.php";
                         <a class="jeu pinkcase" href="./quizz_a.php">
                                 <p>Quizz</p>
                         </a>
-                        <a class="jeu greencase" href="./blindtest.php">
+                        <a class="jeu pinkcase" href="./blindtest.php">
                                 <p>Blind Test</p>
                         </a>
-                        <a class="jeu greencase" href="./defis.php">
+                        <a class="jeu pinkcase" href="./defis.php">
                                 <p>Défi filmez vous !</p>
                         </a>
                 </f>
@@ -50,6 +50,14 @@ include_once "../includes/components/head.php";
     </div>
   </main>
   
+  <div id="non">
+    <div>
+      <p>Votre écran est trop grand ! <br> Ceci est une application mobile.</p>
+      <img src="./assets/images/vache.png" alt="Vache des Highlands">
+    </div>
+  </div>
+
 </body>
+
 
 </html>
