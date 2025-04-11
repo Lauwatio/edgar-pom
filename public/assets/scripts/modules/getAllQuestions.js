@@ -119,7 +119,7 @@ const gestionPartie = (questions, joueurs) => {
                 <img src="./assets/images/podium.png" alt="Podium">
               </div>
 
-              <a href="./adulte.php" class="button-home">Accueil</a>
+              <a href="./index.php" class="button-home">Accueil</a>
             `;
         }
       });

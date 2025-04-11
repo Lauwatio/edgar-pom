@@ -22,9 +22,6 @@ include_once "../includes/components/head.php";
         <a class="jeu greencase" href="./quizz_e.php">
                 <p>Quizz</p>
         </a>
-        <a class="jeu greencase" href="">
-                <p>Blind Test</p>
-        </a>
         
       </figcaption>
       </div>
